@@ -847,3 +847,32 @@ a:focus {
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+.package {
+  padding: 20px;
+  background-color: color(srgb 0.0391 0.0594 0.2622);
+  font-size: larger;
+  color: white;
+}
+
+/* Step 1 */
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Step 2 */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Step 3 */
+.scroll-container li {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
