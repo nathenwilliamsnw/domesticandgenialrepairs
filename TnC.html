@@ -1,0 +1,610 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body style="background: url(data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCALxAwADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9U6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKaXCdTQAYNGDUf2mP+9TPtLN92Nmp2Yros0VAGmPZVpvlyP1lx/u07E8xY3Ubqg+zf3nZ6d9mjpe6HvDvOX+8KPOT+8Kb9mj/ALtO8iP+6v5U/dD3hnnx/wB6jz4/71P2J/dFGxP7ope6V7w37TH/AHqPtMf96neWvoKXy19BT90n3hPOT+8KXzF9RSeRH/dX8qb9mj/u0e6HvEmVpcCovs8foaZ9n/uOyUrIZZoqt5Uifdkz/vU4mb0VqdhcxPRVb7Syj5o2p32hP71FmHMT0U1WDdDmnVJYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUVG8yr1agCSiq3nSS/cXZ/tNR9n3j942+qsRzErTRp1YVF50j/cj/4E1Soip91akpAVhHI33pP++KctunYVPRTuHKMCKn3Vp9FFSWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUwor/eWn0UAQG3QdBtpoilQfLJu/wB+rNFVcjlK3nSJ96L/AL4pyXMTj73/AH1U9Ruiv95aQElFVvs+wfu22UedJF99d/8AtLTsHMWaKjSZW6NUlSWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRSdBVf7TvfbGu//AGqALNQPPztVd9NFtv8AmkbfU6qF6DFPYgg8mSX777B/dWpUiWP7q0/NGaXMVYWiiigYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBG8SyfeWovJki+4+//ZarGaM0cwrEKT5O112t6VNgUhAb71QG3CHMbbKegizRVb7TsfbIuz/aqx1FIoWiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiio3lVP8AeoAkqB7j5tsa72puxpv9Z8i/3KmRFRflpkEfks3Mh3D+7U3QUtFIsKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAqt5Oz5o22f7NWaKAKyXP8Mq7GqzTHRX+9UOxof8AV/Ov9ynuQWaKhimV/wDeqakWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFJnaOTTJZliHNReS0rbpOn9ymQHnNN8sf/fdPihWH3b+9U1FFwCiiikWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBBLCr/AO9/epvnND8sn/fdWaKdyBM7hwaWq3ktD80f/fFSxTLKOKLASUUUUiwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBAMVXeb5tsfzvQ7tcfLH93+/UqRLCMKKexI2KHYNzfO1TUUUigooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACoXh3/ADL8j1NRQBWSb5tsnyPVgjNMeJZhhhUSO1v8sn3f79Pcks0UUUigooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopjP5abmoAVnCLk1X+adv7sf86PmnOW+WOrVV8JHxDcbVwtOooqSwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKayB1wadRQBV+aBv70f8AKrCuHXIp1VfmgOV+aOq+Ij4S1RTFfzE3LT6ksKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiim52rzQA13VF3NUKI0x3v9z+FaOZ33Njyx+tWqr4SPiCiiipLCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCq6NCd6fc/iWp1fzE3LT6qnEDbl+61V8RHwlqimq4dcinVJYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVT/wCPh/8ApktPd/NYxr/wKplTy02rVfCR8Q+iiipLCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAKf8Ax7v/ANMmq5TGTzE2tUCM0T+W33f4ar4iPhLVFFFSWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABVa5m/5ZL99qkllES/ypsEWMu332pkD4YhEuKkoopFhRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVHNEJVxUlFAFa2f/lm331qzUE8WfnX7606GXzV/wBr+KmQS0UUUiwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBhRX+8tPoooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACikpaACikzRmgBaKTNGaAFooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACmBFT7q0+igAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooATFLUE11HEPmas+XU2b7q7axlUjA1jTlM0pJFQcttqvLqUadPmrMeRpPvPUZFc0q8vsnTGhH7RfbU2/hVaha+mbo2KrEZpRWMqkzX2URzSyN95mpvzUUVFzSwfNTllkX7rNTaKLhYsLfTL/FUqao38SrVDBowav2siPZQNiLU436/LVmORXHDbq58ClSRk+69bRry+0YyoR+ydHSYrIh1SRf9Yu76VoQ3Mcv3W/4DXTGpGZzSpyiWKKKK2MgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAaBzSkcUA5qG4ulgT5vvdlqW1HcVuYc7rGm5m21n3OoN92P5aqzXTXDfNUWM81xVK3N8J306HL8QtFFFcx1BRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBettRZflk+b/arQRw67lbdWBjHNTQ3TW7fLXTTrcvxHLUoc3wm7ilqvb3Szr8vXutTmu2MuY4RaKKKoAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKQigGq13c+Qmf4qmUuUUY8wXd2tsnq1ZLuztuah5Gd9zUyvMqVOc9KnT5AxRRRUG4UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRiiigB6O6NuWta0vFuFxnDVjDpT0dkfctXSqchhUp85vgUtVbS5Wdc/xVYJr04y5jzZR5R1FFFUMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoopDQBHLKsMZZjxWHNM0su5qnvbjzZNq/dWq1ebWqc2h3UqfLqFFFFYnUFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFIKtw26+X5kjfL/AOhURIlLlKtFWRLEzbfK2r/vVHKvkyMtEoi5yKinIjO21f4qn+zxq21pV/75o5A50itRU00Hl7fm3K33WqGjkLTuFFFFAx0UrRNuWtuCVZo8g8VgnirVjc+VJtb7rVtQqcujOerT5o3NqiiivSPPCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAQ1T1G48mPaPvNVzNYN5N5s7NWFaXLE1ox55EdFFFecemFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAEkMXms38Cr95qlu5Vbaqt8qrSW6ebayKv3t26q5q/sGW8wq9aSGffHINy7f4v4agtIlfczL8qrQ91+7YRqqq1EfdIl7/ALqGQS+XMretStFb/eMv/jtVQaWpjIuULlq7mV9ir91f71VaTNLS5iox5AooooLCiig0Aa2nXHnR7T95auVg2c3lTq1b2cYr0aMuaJ5laPJIWiiitzIKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAKt9L5NufesQ9avao++RV/u81SWvNrS5pHo0I8sRaKKKxNwooooAKKKKACiiigAooooAKKKcqszbVoAbRVzEdmP7zt/47TGiWVfMh/wCBLWnIZc5WooqSBVlmVWrM0btqNSRlbctT/bZv73/jtKUYN/x7Z/76p3l/9Ox/8eraMZGEpQe6Iprxpotv8P8AsVAKs3cCokbbdu5fu1WFYy5uY0hy8vuhRRRQaBRRRQAUUUUAFFFFADR1rbsZfOt19qxWq7pb7JGX+9zW1GXLIwrx5omvRRRXpHnBRRRQAUUUUAFFFFABRRRQ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cI88uUznLkiWbO2+zxberfxVZI4pc0Z5r1EuU8qUuYWiiimMKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBjqHTBrFurfyJP9n+Gtwcio5YVmTa1YVKfPE1p1ORmDRUk8bQSYNR151rHpJ31CiiigYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUVJBG08mBQJu24+1t2nk/2f4q2UUImBTYoVhTatSYwK9GnDkiebUqc7FooorcyCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCKaFZk2t0rGubdoG+bpW9UbxrKu1lrCpT5zWnU5DApM1bubBofmX50qoRmvOlGUDvjKMxaKBRQaBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUAYq1b2LTfM3yLRGMp/CZynyEVtbtO3y9K2YYVhTatKkaxLtVfwqSvRp0+Q4KlTnCiiitzIKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAbgGqdxp6yncPlargxS4zUTjGW44ylHYwZrWSL7y1D0roiNy4PWqcunKw/d/JXHKh/KdsK/wDMZRoAqeSzmj+bb/3zUNc/LyHQpp7BRRRSKCiiigAooooAKKKKAEIopamjs3kO4LT5ecnmSK/WpobWSX7q1oRabGnX56uIqou0cV0QofzHPOv/AClW309Yvmb5mq3wKdScV2RjGJxSlKQtFFFWIKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAEpaKKACiiigBMUx4Y5R8yg1JRQBSbTo26bl+lQPpLfwyVqUVj7OJoqkl1Mj+zZP9mmf2dL/dFbVFR7CBp7eRjf2bN/cH/fVO/s6T/Z/wC+q16KPYQF7aRmJpbfxSVMunRr13N9au0Vfs4k+0kRpDHEPlUCn4paK2MgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKSgBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACkOKTtVDWj/xLpvpTiuaXKRKXLHmLLXcK/emjH/AqT7ZB/z2T/voVx9paSXcnlxnDVe/4R67/wBn/vqu2VCnD4pHHHEVJ/DE6neDQSOK43/StNk/iiNbmkawLweVKNko6f7VY1KEox5olwxEZS5ZGxRRRXOdgUUUUAFFFFABRRSZoAWiikoAWiiigAopM0tABRRRQAUUUUAFFJS0AISKBXN69eTQ3e1JGRNv8LVr6Sd2nQ/7orSVPljzmManNLlLpGaoajqS6dFuYbmb7qVfJqhqemjUI1w2xl5U1NPl5veKqc3L7oabqiagjYXa6/eWr4GKztK0v+zkbc+9mrRBzRU5eb3Qp83L7wtFFJmpNBaKKKACkOKTtWP4gvmt40jj+9J97/dqox55cpnKXJHmL739tE21pkVvTdUsc8cw/dyK4/2WzXOWOhNd26ytJs3fd+Wq9xFPo138jf7v+1XV7GEvdjLU5PbVI+9KJ2NFRQTCWBJP7y7q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ooAKKKKACimO6p96n0AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFMR1f7tAD6KKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAGOm9NtQ2z/wDLNvvrVmoLiLfhl++tNEE9FRwyiVc1JSLCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooqGabyk/2qAGXL/wDLNfvtUyJsTbTIYtmWb77VNTZAUUUUiwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooArSoyP5i/8CqZH3pup9VWHkNuX7rVXxEfCWqKarh1yKdUlhRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFNZwi5NACO+xN1QxIzv5jf8BpFHntub7q1aqvhI+IKKKKksKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAq8wP/wBMz+lWqTqKq/NA396Nv0qviI+Et0UUVJYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAJ0FVuZ3/AOmY/Wk+adv7sa/rVroKr4SPiFoooqSwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAKvMD/9Mz+lWFcOuRTqqlGgbcv3P7tV8RHwlqio0dXXctSVJYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFRu6ou5qAHM4Rcmqvz3Df3YqcEadtzfc/u1aqvhI+IKKKKksKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAKzwsjb4/8AvmpIpllHo392pahlh3jcvyNTIJqKgSbnbJ8rVPSLCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKgebnbH8zUAOlmWIerf3ajSFnbfJ/3zT4odg3N87VNT2ICiiikWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAMdFdfmqHe1v975o/71WaKYDEdXX5afVZ4WRt8f8A3zTkuA3yt8j07EE9FFFSWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUx3VPvVG9wF+VfnempCztvk/75p2IAO1x935EqZEVF+Wn0UFhRRRSAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAqN4lf73NSUUAVv3lv8A7aVKkqyfdapKge2VjuX5G9aZBPRVbzmi/wBYvy/31qVHV/utSLJKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoqN3VPvNUXnNN/q1/4HQBK8qx/eaov3lx/sJTktlU7m+dvWp6ZBGkSp93ipKKKRYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVA1uudy/I1T0UAVvOki/1q/L/eWpUdX+61SVC9ur/7LUyCaiq2Zoj/AH1pyXCsP7v1p2DmJ6KKKksKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAbg0YNRvcqg/vfSmZmm/6ZVVmK6JXdU+81Rec0v+rX5f77U9LdU/2mqakSQLbrnc3ztU9FFIsKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACo3RX+8tSUUAVhb7D+7bZ/s0ebIn30z/ALtWaKq5HKQrcxv0apd1MaFX+8Ki+zbR+7Zko90PeLNFVszr/dej7Tt+8rJRYOYs0VGJUbo1SVJYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRUfnRr/EKAJKKrfad33VZ6dmZv7q1ViOYm3VE1zGnVqZ9m3D94zPUqwrH90Yo90PeIvNkf7if99UfZ2f/WNvH92rNFFw5SNEVPurUlFFSWFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAEbwq3VaZ9lT+HKfSps0Zo5hcpX8mRPuyZ/wB+nYmH91qnoqrk8pXE0n8UVH2n+8jJViilcCD7XH/tUv2mP+9Uu2m+WvoKfuh7wn2hP7wo85P7wo8lf7oo8iP+6v5Ue6HvB5yf3hR9oT+8KPIj/ur+VHkr/dFHuh7w37TH/epPtcf+1Unlr6CnbaPdD3iD7T/dRnpPOkf7sX/fdWaKVwIMTH+6tN8mRvvSflVmincOUg+zj+JmeniJF6LT80ZqOYqwtFFFMYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAJ3pKKKQDqKKKYBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAnekoopAOooopgFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/9kA); background-repeat: repeat-y;
+    background-position: center; padding: 100px;">
+        <div style="page-break-before:always; page-break-after:always">
+            <div>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <b>08002081301                   support@domesticandgenialrepairs.co.uk</b>
+                    <br/>
+                </p>
+                <p>
+                    <b>
+                        Terms and conditions <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>Plan Synopsis &#8211;</b>
+                    The piece of your plan paperwork that is specific to you and is provided to you either at renewal or       <br/>
+                    after you purchase a plan. <br/>
+                </p>
+                <p>
+                    <b>Eligibility &#8211;</b>
+                    To be eligible, you must be a resident of the <b>United Kingdom</b>
+                    at least 18 years old. When this plan    <br/>
+                    begins, your product must be in good operating order and no older than 10 years from the date of purchase. <br/>
+                </p>
+                <p>
+                    <b>Contract &amp;Services &#8211;</b>
+                    This plan does not fall into the insurance product category and is therefore not subject to <br/>
+                    insurance regulation. This plan is a service contract and is subject to UK service contract legislation. The 
+                    <b>
+                        FCA <br/>(Financial Conduct Authority) 
+                    </b>
+                    regulates businesses dealing with insurance contracts. <br/>
+                </p>
+                <p>
+                    <b>Repair Request &amp;Claim &#8211;</b>
+                    To request a repair, please contact us promptly using the phone number provided on <br/>
+                    your plan summary. We are here to assist you. <br/>
+                </p>
+                <p>
+                    Our customer support staff will attempt to resolve any mechanical or electrical breakdowns in your product over the <br/>
+                    phone, if they occur after the manufacturer &#8217;s parts &amp;labor warranty period has expired. We reserve the right to <br/>
+                    determine whether to approve a repair if we are unable to remedy this issue. If a repair is accepted, we will then give an <br/>
+                    engineer permission to complete the work, or we may chose &#8211;at our discretion &#8211;to replace your product or cover the <br/>
+                    associated costs; all decisions are subject to these terms &amp;conditions. We do not cover any pre &#8211;existing defect, any <br/>
+                    willful or malicious damage, including accidental damage, or any fault that has occurred previous to the 45 &#8211;Day period. <br/>
+                    There is a 45 &#8211;Day clause period during which the initial claim cannot be lodged. <b>(See plan limitation, please).</b>
+                    <br/>
+                </p>
+                <p>
+                    For repairs, you should first get in touch with the manufacturer if your item is still covered by its original guarantee. You <br/>
+                    can make use of our service if the manufacturer &#8217;s warranty has expired on your appliance.  <br/>
+                </p>
+                <p>
+                    <b>Plan Restriction &#8211;</b>
+                    Your plan allows you to request an unlimited number of repairs; however, we will place a &#163;400 <br/>
+                    claim limit on each of your individual claims. Just to be clear, we will never be responsible for paying more than &#163;400 in <br/>
+                    repair and replacement fees for any of your products. There &#8217;s a 45 &#8211;Day clause term in your plan when you cannot <br/>
+                    make your first claim without paying any excess within that time. Should a claim be made during the first 45 days of the <br/>
+                    plan &#8217;s start date, you will be required to pay a &#163;250 excess if it is made within the clause &#8217;s 45 &#8211;Day period. <br/>
+                </p>
+                <p>
+                    <b>Appliances Repair &amp;Replacement</b>
+                    <br/>
+                </p>
+                <p>
+                    <b>1. </b>
+                    Upon approval of a repair, we reserve the right, at our sole discretion, to substitute your product with a new one <br/>
+                    that has a similar model and technical specifications, particularly if your make and model is no longer <br/>
+                    manufactured.  <br/>
+                </p>
+                <p>
+                    <b>2. </b>
+                    We reserve the right to issue you a voucher in the event that we determine your product needs to be replaced <br/>
+                    but are unable to do so in a reasonable manner. The coupons are good for the full retail price of a replacement <br/>
+                    product with the same or comparable model the technical specifications, from a retailer or our choosing. <br/>
+                </p>
+                <p>
+                    <b>3. </b>
+                    The validity of every voucher is 12 months from the date of issuance. We will mail voucher payments to the last <br/>
+                    address you provided. We might offer the equivalent in cash if vouchers are not available.  <br/>
+                </p>
+                <p>
+                    <b>4. </b>
+                    As soon as you receive notification from us that the aforementioned vouchers have been ordered, the risk <br/>associated with them will transfer to you. When we order vouchers and have them shipped by a delivery  
+                </p>
+            </div>
+        </div>
+        <div style="page-break-before:always; page-break-after:always">
+            <div>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <b>08002081301                   support@domesticandgenialrepairs.co.uk</b>
+                    <br/>
+                </p>
+                <p>
+                    provider, we are not responsible for misplaced vouchers and are not required to replace them, Gift cards cannot <br/>
+                    be exchanged.  <br/>
+                </p>
+                <p>
+                    <b>5. </b>
+                    Under this plan, only engineers who have been approved by us are entitled to do repairs; unless we specifically <br/>
+                    agree otherwise in advance. On a day that is mutually agreed upon, repairs will be completed within the repair &#8217;s <br/>
+                    regular business hours, which are Monday through Friday from 9 a.m. to 5 p.m. Upon the arrival of the <br/>
+                    repairman, you need to have your plan documents available. You may employ the repairer of your choice if we <br/>
+                    approve the repair but cannot locate an approved engineer; however, you will need to let us know who that <br/>
+                    repairer is. You must reimburse them and request a reimbursement from us. Kindly save copy of your invoice <br/>
+                    for our records.  <br/>
+                </p>
+                <p>
+                    <b>6. </b>
+                    The original product will become our property and be disposed of if it is taken from your home for repair and is <br/>
+                    latter replaced. <b>You will be liable for paying </b>
+                    for the disposal of the old item if it is replaced but stays in your <br/>
+                    house. In every situation, you are going to be the one to install the new equipment and cover any associated <br/>
+                    charges.  <br/>
+                </p>
+                <p>
+                    <b>7. In the event that your product is replaced</b>
+                    by the manufacturer under warranty, your plan will be apply to the <br/>
+                    new appliance just like it did to the original. In the event that your product is replaced within the parameters of <br/>
+                    your plan (or that you receive vouchers for a replacement), we will send you a refreshed plan summary that <br/>
+                    includes information on the new product. By doing this, it will be indicated the=at the plan has transferred <br/>
+                    automatically to your replacement product under the same terms. Furthermore, we maintain the right to end <br/>
+                    your plan at the time of replacement.  <br/>
+                </p>
+                <p>
+                    <b>8. </b>
+                    We will notify you <b>if we choose not to authorize a repair request</b>
+                    that would otherwise be covered by your <br/>
+                    plan. All of the fees you have paid for the current period of your plan will be reimbursed, and your plan will <br/>
+                    terminate immediately, barring our refusal to repair as a result of your violation of these conditions. No more <br/>
+                    sums will be required to be paid. We will send a written confirmation to the last address you provided.  <br/>
+                </p>
+                <p>
+                    <b>Payment Policy &#8211;</b>
+                    If you use to direct to pay the monthly costs (which include all applicable taxes), you have to <br/>
+                    follow the &#8220;Payments Schedule &#8221;outlined in your plan documentation. Unless you notify us otherwise, we might try to <br/>
+                    seek payment again if we are unable to get payment from your bank. If we are unable to collect on a second request, <br/>
+                    we will terminate your plan for nonpayment. This implies that in the event of a malfunction or breakdown, you won &#8217;t be <br/>
+                    able to use our services. (Refunds are not available.) <br/>
+                </p>
+                <p>
+                    If the initial plan period hasn &#8217;t already ended, no more payments will be taken for the remaining months of the initial plan <br/>
+                    period until you make the payments in line with the Payments after you have paid the monthly fees by Direct Debit for <br/>
+                    the number of consecutive months indicated in the &#8220;Payments Schedule &#8221;. <br/>
+                </p>
+                <p>
+                    Unless and until you make payments in line with the &#8220;Payment Schedule &#8221;outlined in your plan documents, no further <br/>
+                    payments will be accepted for the balance of the initial plan period. The Plan renews for an additional term if we are <br/>
+                    unable to (see &#8220;Duration and renewal of your plan &#8221;below). <br/>
+                </p>
+                <p>
+                    <b>1. </b>
+                    In the event that you decided to pay the entire amount of fees for the term up front in one go, you will need <br/>
+                    to pay this total before the plan begins, including any applicable taxes.  <br/>
+                </p>
+                <p>
+                    <b>2. </b>
+                    To collect any money that is owned to us, we might work with a collection agency. <br/>
+                    <b>3. </b>
+                    Your plan will be suspended from the due date if you fail to make the required payment on time. After this <br/>
+                </p>
+                <p>date, requests for repairs won &#8217;t be approved unless the payment is made.  </p>
+            </div>
+        </div>
+        <div style="page-break-before:always; page-break-after:always">
+            <div>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <b>08002081301                   support@domesticandgenialrepairs.co.uk</b>
+                    <br/>
+                </p>
+                <p>
+                    <b>4. </b>
+                    We don &#8217;t keep track of cardholder data. <br/>
+                </p>
+                <p>
+                    <b>
+                        <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>Plan Duration &amp;Renewal Policy &#8211;</b>
+                    <br/>
+                </p>
+                <p>
+                    <b>1. </b>
+                    The first plan period, unless terminated in line with these terms and conditions, starts on the &#8220;start date &#8221;and <br/>
+                    lasts until the &#8220;renewal date,&#8221;as shown in your plan summary. 
+                    <b>
+                        <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>2. </b>
+                    We will write to you about renewing before your plan expires, and the new payment amount will be indicated on <br/>
+                    your renewal notification. At renewal, the charge may go up.
+                    <b>
+                        <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>3. </b>
+                    Unless you notify us otherwise, if you pay by Direct Debit, your protection will automatically renew each year for <br/>
+                    an additional year with a new plan. To make sure you are constantly covered, the renewal cost will be deducted <br/>
+                    once more from the bank account you have specified. 
+                    <b>
+                        <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>4. </b>
+                    To keep your plan active, you will need to make payment if you choose to pay using any other method.
+                    <b>
+                        <br/>5. 
+                    </b>
+                    There is a 14 &#8211;Day cooling &#8211;Off period that begins on the day your plan is renewed or the day you receive <br/>
+                </p>
+                <p>
+                    your renewal paperwork, whichever comes first.
+                    <b>
+                        <br/>6. 
+                    </b>
+                    We reserve the right to decline your request to renew your plan. 
+                    <b>
+                        <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>Cancelation Policy &#8211;</b>
+                    <br/>
+                </p>
+                <p>
+                    <b>1. </b>
+                    The 14 Days stating from the date the plan begins, whichever comes first, constitute the &#8220;cooling off period.&#8221;
+                    <b>
+                        <br/>2. 
+                    </b>
+                    You can cancel your plan during the cooling &#8211;off period, and we &#8217;ll reimburse any money you paid. 
+                    <b>
+                        <br/>3. 
+                    </b>
+                    These rights do not apply if we cancel your plan or if it ends automatically (see &#8216;Prerequisites for the Plan &#8217;<br/>
+                </p>
+                <p>
+                    below).
+                    <b>
+                        <br/>
+                    </b>
+                    &#61623;We may terminate your plan and stop providing you with services under it you don &#8217;t follow certain <br/>
+                </p>
+                <p>
+                    requirements and prerequisites (See below in the prerequisites section). Future payments paid in accordance <br/>
+                    with your plan will be reimbursed. Any call &#8211;out and repair expenses we have incurred during the current <br/>
+                    period are your responsibility; these will be subtracted from your payments amounts, with any money left over <br/>
+                    being repaid.
+                    <b>
+                        <br/>
+                    </b>
+                </p>
+                <p>
+                    &#61623;Your plan may be canceled at any time with fourteen (14) Days &#8217;notice from us. A pro rata refund of the money <br/>
+                    paid for the remaining unused days of your plan will be given to you if we terminate it under this condition. 
+                    <b>
+                        <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>How to cancel &#8211;</b>
+                    To cancel your plan call us at <b>08002081301</b>
+                    (9 am to 5 pm, Monday through Friday). Additionally, <br/>
+                    you can cancel by sending a letter to the address listed in the section titled &#8220;Company Details.&#8221;We won &#8217;t instantly <br/>
+                    terminate your plan if you are paying by direct debit and instruct your bank to cancel the direct debit instruction without <br/>
+                    first getting in touch with us. In order to avoid any correspondence about unpaid invoices, please get in touch with us <br/>
+                    immediately if you decide to cancel. <br/>
+                </p>
+                <p>
+                    <b>Prerequisites for the Plan &#8211;</b>
+                    Any information we ask for when you apply for the plan must be given to us. You <br/>
+                    must only provide accurate, truthful, and not any misleading information; also, your product must have been installed, <br/>
+                    maintained, and utilized in compliance with the manufacturer &#8217;s instructions &#8211;<br/>
+                </p>
+                <p>
+                    <b>1. </b>
+                    You must be the owner of the product and keep it only for home usage.<b></b>
+                </p>
+            </div>
+        </div>
+        <div style="page-break-before:always; page-break-after:always">
+            <div>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <b>08002081301                   support@domesticandgenialrepairs.co.uk</b>
+                    <br/>
+                </p>
+                <p>
+                    <b>2. </b>
+                    The usage of your product is restricted to private residences that are occupied by a single household at the <br/>
+                    address provided by you.
+                    <b>
+                        <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>3. </b>
+                    Your product needs to be safe to use, easily accessible, and compliant with all applicable safety regulations. 
+                    <b>
+                        <br/>4. 
+                    </b>
+                    As soon as become aware of the malfunction, you have to take reasonable action to minimize damage to your <br/>
+                </p>
+                <p>
+                    goods. 
+                    <b>
+                        <br/>5. 
+                    </b>
+                    The appliance must have been purchased no more than ten years ago. 
+                    <b>
+                        <br/>6. 
+                    </b>
+                    We reserve the right to instantly cancel your plan if there is any indication that you are not complying with any <br/>
+                </p>
+                <p>
+                    of the aforementioned requirements.
+                    <b>
+                        <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>Exclusions of Services &#8211;</b>
+                    The following are not covered under the plan, and we will not pay for repairs related to <br/>
+                    them &#8211;<br/>
+                </p>
+                <p>
+                    <b>1. </b>
+                    Damaged caused by an outside entity other than our agent during the product &#8217;s delivery, installation, or <br/>
+                    transportation.  <br/>
+                </p>
+                <p>
+                    <b>2. </b>
+                    Any breakdown cost already covered by any manufacture, supplier or repairer guarantee or warranty on a <br/>
+                    product.  <br/>
+                </p>
+                <p>
+                    <b>3. </b>
+                    Replacement or recall of the product (or any part) by a supplier or the manufacturer. <br/>
+                    <b>4. </b>
+                    Adapting a product to confirm to new laws; improving a product that is only necessary because of changes in <br/>
+                </p>
+                <p>
+                    the law of ensuring that is safe to use. Your failure to follow the manufacturer &#8217;s instructions. <br/>
+                    <b>5. </b>
+                    Any issues pertaining to the availability of broadband, gas, electricity, water, or broadcast programing.  <br/>
+                    <b>6. </b>
+                    Routine maintenance, cleaning, servicing and re &#8211;gassing. <br/>
+                    <b>7. </b>
+                    Repairs carried out outside of your country or residence. <br/>
+                    <b>8. </b>
+                    Loss or damage to any other items, whether or not they are attached to the goods, unless it can be <br/>
+                </p>
+                <p>
+                    demonstrated that we are at fault. <br/>
+                    <b>9. </b>
+                    Cosmetic harm, such as dings, scratches, paint damage, ceramic or glass surfaces.  <br/>
+                    <b>10. </b>
+                    Any reduction of value, harm, or important to operating resulting from: theft, theft attempts, carelessness, <br/>
+                </p>
+                <p>
+                    intentional damage, or harm by plants, animals, or plants/trees. <br/>
+                    <b>11. </b>
+                    Any loss, damage, or important to functionality brought on by: terrorism, insurrection, revolution, war, riot, <br/>
+                </p>
+                <p>
+                    armed conflict, civil commotion, rebellion, man &#8211;made events or catastrophes, or technological hazards ( like <br/>
+                    computer viruses or date &#8211;change faults). It also includes any loss, damage, or impairment to functionality <br/>
+                    caused by earthquakes, floods, lightning, fire, wind, humidity, weather condition, salt spray, storm, or other <br/>
+                    natural events or catastrophes. <br/>
+                </p>
+                <p>
+                    <b>12. </b>
+                    The price or replacing any additional parts, such as external fuses, batteries, power cells, rechargeable <br/>
+                    batteries, use &#8211;chargeable lights bulbs, fluorescent tubes and associated starter components, filters, <br/>
+                    attachments, cables, joints, plugs, light covers, grills, glass, enamel parts, catalytic panels, external piping, <br/>
+                    starter connections and straps, 3D glasses, brushes, and tubes. <br/>
+                </p>
+                <p>
+                    <b>13. </b>
+                    For items with screens: burnt screens, marking on the screen, and repairs for pixel failure when are quantity or <br/>
+                    placement of pixels does not above the manufacture &#8217;s allowable limit.  <br/>
+                </p>
+                <p>
+                    <b>14. </b>
+                    Regarding television: the transition from analog to digital broadcasting, which involves stooping analog <br/>
+                    transmission, issues with software interfaces, satellite or cable systems, or getting access to cables within walls <br/>
+                    or buildings.  <br/>
+                </p>
+                <p>
+                    <b>15. </b>
+                    Repairs pertaining to AGAs, gas boilers, and tumble dryers will not be covered by us. 
+                </p>
+            </div>
+        </div>
+        <div style="page-break-before:always; page-break-after:always">
+            <div>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <b>08002081301                   support@domesticandgenialrepairs.co.uk</b>
+                    <br/>
+                </p>
+                <p>
+                    <b>Transfer of Plan &#8211;</b>
+                    This plan is solely intended to help you. The plan is nontransferable and grants no rights or <br/>
+                    benefits to any other third party. <br/>
+                </p>
+                <p>
+                    <b>Modifications to the Terms of Agreement &#8211;</b>
+                    In order to abide by the law, rules, industry guidelines, or <br/>
+                    standards of practice, we reserve the right to amend or replace these terms and conditions. Fix any mistakes or <br/>
+                    misunderstandings, or take into account modification to the extent or type of the protection offered to you.  <br/>
+                </p>
+                <p>
+                    Any change that might materially affect your rights or responsibilities will be communicated to you in writing and will be <br/>
+                    effective after thirty (30) Days. The date indicated in the notice is when the new terms and conditions will go into effect. <br/>
+                    You may cancel the plan by informing us within that notice period if you do not agree with the modifications, in which <br/>
+                    case you will get a pro rata refund of any payments you have made for the portion of the plan that has not yet expired.  <br/>
+                </p>
+                <p>
+                    <b>Data Protection &#8211;</b>
+                    Your information, either from you or from others, will be used by us for the following purpose: to <br/>
+                    deliver the service you have requested; to handle administrative tasks (such as collecting any outstanding balances), <br/>
+                    marketing, market research, customer surveys, regulatory reporting, identity verification, analytics, and testing. In order <br/>
+                    to properly administer you plan, we may also share your information with other carefully chosen businesses working on <br/>
+                    our behalf. Any changes we make to our business that may have an impact on your plan will be communicated to you, <br/>
+                    as well as any advancements we believe you would find interesting.  <br/>
+                </p>
+                <p>
+                    We will use the information you have given us to contact you exclusively with updates in the future. If you do not want to <br/>
+                    be informed offers and development in the future that are not related to your plan, then let us know. Please notify us in <br/>
+                    writing if your personal information changes, if you would want to modify your marketing preferences, or if you would <br/>
+                    like to stop receiving marketing information. We comply with the General Data protection Regulation (GDPR) and the <br/>
+                    Data Protection Act 2018, which regulate the processing of personal data in the United Kingdom. Data protection Reg <br/>
+                    No 
+                    <b>
+                        ZB565882 <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>Regulatory Law &amp;Statutory Rights &#8211;</b>
+                    Unless we mutually agree differently, we shall communicate with you in <br/>
+                    English, and English Law will govern our interactions. Nothing in the terms will be diminish or impair your legal rights; to <br/>
+                    learn more about your legal rights, get in touch with the Citizens Advice Bureau: www.adviceguide.org.uk 03454040506. <br/>
+                </p>
+                <p>
+                    <b>Direct Debit Guarantee &#8211;</b>
+                    <br/>
+                </p>
+                <p>
+                    <b>1. </b>
+                    All banks and building societies that accept instructions to pay direct debits provide this guarantee. <br/>
+                    <b>2. </b>
+                    Unless otherwise specified, we will give you notice of any changes to the amount, date, or frequency of your <br/>
+                </p>
+                <p>
+                    Direct Debit at least 10 working days before your account is charged. You will receive confirmation at the <br/>
+                    time of request of the amount and date if you ask us to collect the payment. <br/>
+                </p>
+                <p>
+                    <b>3. </b>
+                    You are entitled to a complete reimbursement of the money paid from your back or building society if a <br/>
+                    mistake is made in the payment of your Direct Debit by us, your bank, or build society. On the other hand, <br/>
+                    you have to return any refunds you are not entitled to as soon as they are requested. <br/>
+                </p>
+                <p>
+                    <b>4. </b>
+                    A Direct Debit can be canceled at any time by contacting your building society or bank. It could be necessary <br/>
+                    to get written confirmation.  <br/>
+                </p>
+                <p></p>
+            </div>
+        </div>
+        <div style="page-break-before:always; page-break-after:always">
+            <div>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <b>08002081301                   support@domesticandgenialrepairs.co.uk</b>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <b>Get in Touch with Us &#8211;</b>
+                    Contact us by phone at 
+                    <b>
+                        <i>08002081301</i>
+                    </b>
+                    <i></i>
+                    or by mail at <br/>
+                    <b>
+                        <i>support@domesticandgenialrepairs.co.uk.</i>
+                    </b>
+                    <i></i>
+                    For training and quality assurance purpose, calls may be recorded and <br/>
+                    monitored. At minimum, lines are available Monday through Friday from 9a.m. to 5 p.m. (Excluding public holidays). <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <b>Company Details &#8211;</b>
+                    Domestic &amp;Genial Repairs LTD. Is registered in England and wales under company <br/>
+                </p>
+                <p>
+                    registration <b>14969970.</b>
+                    Registered office address; 
+                    <b>
+                        <i>
+                            27 OLD GLOUCESTER STREET LONDON UNITED <br/>
+                            KINGDOM WC1N 3AX. <br/>
+                        </i>
+                    </b>
+                </p>
+                <p>
+                    <b>
+                        <i>
+                            <br/>
+                        </i>
+                    </b>
+                </p>
+                <p>
+                    <b>
+                        <br/>
+                    </b>
+                </p>
+                <p>
+                    <b>
+                        Businesses that deal with insurance contracts are subject to regulations from the Financial Conduct <br/>
+                        Authority (FCA). We don &#8217;t provide insurance contracts.  <br/>
+                    </b>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p>
+                    <br/>
+                </p>
+                <p></p>
+            </div>
+        </div>
+    </body>
+</html>
